@@ -127,7 +127,7 @@ const Login = () => {
           height: '100vh',
           margin: 'auto',
           p: 0,
-          maxWidth: '1600px',
+          // maxWidth: '1600px',
         }}
       >
         <Grid p={0} sx={combinedStyles} container alignItems="center">

@@ -33,7 +33,8 @@ const styles = {
     backgroundImage: `url(${AuthBGLogin})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    overflow: 'hidden',
+    overflow: 'auto',
+    zIndex: 999,
 };
 
 const combinedStyles = {
@@ -136,6 +137,7 @@ const RegisterView = () => {
                     minHeight: '100vh',
                     margin: 'auto',
                     p: 0,
+                    zIndex: 999,
                     // maxWidth: '1600px',
                 }}
             >
@@ -159,7 +161,7 @@ const RegisterView = () => {
                             <CustomizedSteppers />
                             <Box
                                 sx={{
-                                    zIndex: 1,
+                                    zIndex: 0,
                                     display: 'flex',
                                     flexDirection: 'column',
                                     gap: 1,
@@ -218,7 +220,7 @@ const RegisterView = () => {
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DemoContainer components={['DatePicker']}>
                                             <DatePicker
-                                                sx={{ width: "100%" }}
+                                                sx={{ width: "100%", overflowY: "auto" }}
                                             // onChange={handleTimeChange}
                                             // value={dayjs(new Date())}
                                             // label="Date"
